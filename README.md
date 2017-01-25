@@ -1,4 +1,5 @@
-# CD-Library : Catalogue your CD collection with a barcode reader! 
+# CD-Library
+# Catalogue your CD collection with a barcode reader! 
 
 CD Library - Example ASP.NET MVC Web API(REST) C# Application
 
