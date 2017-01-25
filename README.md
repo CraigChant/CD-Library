@@ -13,7 +13,7 @@ I decided I would build an app to enable me to catalogue my CD collection with n
 
 To use this app yourself all you need is Visual Studio (I am using VS2015), and a barcode reader (I got mine for less than a tenner on eBay!).
 
-You will also need to sign up to Discogs.com and get yourself a developer API authorisation token (I removed mine from the published GitHub JS file).
+You will also need to sign up to http://Discogs.com and get yourself a developer API authorisation token (I removed mine from the published GitHub JS file).
 
 Simply edit the CD_Library_Obj.js file and put your API code in the relevant place...
 
