@@ -33,4 +33,4 @@ http://dance-music.org/CD-Library/CD-Library_2.png
 
 http://dance-music.org/CD-Library/CD-Library_3.png
 
-I hope you find it usefull and welcome all feedback.
+I hope you find it useful and welcome all feedback.
