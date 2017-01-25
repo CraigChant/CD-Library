@@ -1,5 +1,4 @@
-# CD-Library
-Catalogue your CD collection with a barcode reader! 
+# CD-Library : Catalogue your CD collection with a barcode reader! 
 
 CD Library - Example ASP.NET MVC Web API(REST) C# Application
 
@@ -29,6 +28,7 @@ I've used interfaces / IoC / Dependency Injection, so using your own data source
 Here are links to a couple of screen shots...
 
 http://dance-music.org/CD-Library/CD-Library_1.png
+
 http://dance-music.org/CD-Library/CD-Library_2.png
 
 I hope you find it usefull and welcome all feedback.
