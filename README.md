@@ -23,7 +23,7 @@ I have also included the SQL MDF data file with some of my CD's already populati
 
 To remove my data simply delete the contents of the CD table, replace the app_data MDF file, or use your own DB context. 
 
-I've used interfaces / IoC / Dependency Injection, so using your own data source if you know ASP.NET / MVC should be a doddle.
+I've used Interfaces / IoC / Dependency Injection, so using your own data source if you know ASP.NET / MVC should be a doddle.
 
 Here are links to some screen shots...
 
