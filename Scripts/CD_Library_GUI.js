@@ -555,10 +555,10 @@ function addEvents()
                                     });
                                 },
                                 function (obj) // failed callback    
-                                {
+                                {                                 
                                     // show error
                                     showDialog({
-                                        content: obj.jqXHR.responseText,
+                                        content: obj.textStatus + ' : ' + obj.jqXHR.responseText,
                                     });
 
                                 });

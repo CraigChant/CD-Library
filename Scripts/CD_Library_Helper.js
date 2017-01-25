@@ -20,7 +20,7 @@ function showDialog(options) {
         resizable: true,
         draggable: true,
         divID: 'dialog',
-        title: 'The following error has occured.',
+        title: 'The following error occured.',
         icon: 'error',
     };
 
