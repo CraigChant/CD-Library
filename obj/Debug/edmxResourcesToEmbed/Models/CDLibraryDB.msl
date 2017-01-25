@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CDLibraryDBStoreContainer" CdmEntityContainer="CDLibraryDBEntities">
+    <EntitySetMapping Name="CDs">
+      <EntityTypeMapping TypeName="CDLibraryDB.CD">
+        <MappingFragment StoreEntitySet="CD">
+          <ScalarProperty Name="barcode" ColumnName="barcode" />
+          <ScalarProperty Name="catno" ColumnName="catno" />
+          <ScalarProperty Name="year" ColumnName="year" />
+          <ScalarProperty Name="title" ColumnName="title" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Genres">
+      <EntityTypeMapping TypeName="CDLibraryDB.Genre">
+        <MappingFragment StoreEntitySet="Genre">
+          <ScalarProperty Name="barcode" ColumnName="barcode" />
+          <ScalarProperty Name="genre" ColumnName="genre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Labels">
+      <EntityTypeMapping TypeName="CDLibraryDB.Label">
+        <MappingFragment StoreEntitySet="Label">
+          <ScalarProperty Name="barcode" ColumnName="barcode" />
+          <ScalarProperty Name="label" ColumnName="label" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Styles">
+      <EntityTypeMapping TypeName="CDLibraryDB.Style">
+        <MappingFragment StoreEntitySet="Style">
+          <ScalarProperty Name="barcode" ColumnName="barcode" />
+          <ScalarProperty Name="style" ColumnName="style" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

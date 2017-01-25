@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="CDLibraryDB.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CD">
+          <Key>
+            <PropertyRef Name="barcode" />
+          </Key>
+          <Property Name="barcode" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="catno" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="year" Type="smallint" Nullable="false" />
+          <Property Name="title" Type="nvarchar" MaxLength="150" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Genre">
+          <Key>
+            <PropertyRef Name="barcode" />
+            <PropertyRef Name="genre" />
+          </Key>
+          <Property Name="barcode" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="genre" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Label">
+          <Key>
+            <PropertyRef Name="barcode" />
+            <PropertyRef Name="label" />
+          </Key>
+          <Property Name="barcode" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="label" Type="varchar" MaxLength="150" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Style">
+          <Key>
+            <PropertyRef Name="barcode" />
+            <PropertyRef Name="style" />
+          </Key>
+          <Property Name="barcode" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="style" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_CDGenre">
+          <End Role="CD" Type="Self.CD" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Genre" Type="Self.Genre" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CD">
+              <PropertyRef Name="barcode" />
+            </Principal>
+            <Dependent Role="Genre">
+              <PropertyRef Name="barcode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CDLabel">
+          <End Role="CD" Type="Self.CD" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Label" Type="Self.Label" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CD">
+              <PropertyRef Name="barcode" />
+            </Principal>
+            <Dependent Role="Label">
+              <PropertyRef Name="barcode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CDStyle">
+          <End Role="CD" Type="Self.CD" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Style" Type="Self.Style" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CD">
+              <PropertyRef Name="barcode" />
+            </Principal>
+            <Dependent Role="Style">
+              <PropertyRef Name="barcode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="CDLibraryDBStoreContainer">
+          <EntitySet Name="CD" EntityType="Self.CD" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Genre" EntityType="Self.Genre" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Label" EntityType="Self.Label" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Style" EntityType="Self.Style" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_CDGenre" Association="Self.FK_CDGenre">
+            <End Role="CD" EntitySet="CD" />
+            <End Role="Genre" EntitySet="Genre" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CDLabel" Association="Self.FK_CDLabel">
+            <End Role="CD" EntitySet="CD" />
+            <End Role="Label" EntitySet="Label" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CDStyle" Association="Self.FK_CDStyle">
+            <End Role="CD" EntitySet="CD" />
+            <End Role="Style" EntitySet="Style" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CDLibraryDB" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CD">
+          <Key>
+            <PropertyRef Name="barcode" />
+          </Key>
+          <Property Name="barcode" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="catno" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="year" Type="Int16" Nullable="false" />
+          <Property Name="title" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Genres" Relationship="Self.FK_CDGenre" FromRole="CD" ToRole="Genre" />
+          <NavigationProperty Name="Labels" Relationship="Self.FK_CDLabel" FromRole="CD" ToRole="Label" />
+          <NavigationProperty Name="Styles" Relationship="Self.FK_CDStyle" FromRole="CD" ToRole="Style" />
+        </EntityType>
+        <EntityType Name="Genre">
+          <Key>
+            <PropertyRef Name="barcode" />
+            <PropertyRef Name="genre" />
+          </Key>
+          <Property Name="barcode" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="genre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="CD" Relationship="Self.FK_CDGenre" FromRole="Genre" ToRole="CD" />
+        </EntityType>
+        <EntityType Name="Label">
+          <Key>
+            <PropertyRef Name="barcode" />
+            <PropertyRef Name="label" />
+          </Key>
+          <Property Name="barcode" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="label" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="CD" Relationship="Self.FK_CDLabel" FromRole="Label" ToRole="CD" />
+        </EntityType>
+        <EntityType Name="Style">
+          <Key>
+            <PropertyRef Name="barcode" />
+            <PropertyRef Name="style" />
+          </Key>
+          <Property Name="barcode" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="style" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="CD" Relationship="Self.FK_CDStyle" FromRole="Style" ToRole="CD" />
+        </EntityType>
+        <Association Name="FK_CDGenre">
+          <End Role="CD" Type="Self.CD" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Genre" Type="Self.Genre" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CD">
+              <PropertyRef Name="barcode" />
+            </Principal>
+            <Dependent Role="Genre">
+              <PropertyRef Name="barcode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CDLabel">
+          <End Role="CD" Type="Self.CD" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Label" Type="Self.Label" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CD">
+              <PropertyRef Name="barcode" />
+            </Principal>
+            <Dependent Role="Label">
+              <PropertyRef Name="barcode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CDStyle">
+          <End Role="CD" Type="Self.CD" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Style" Type="Self.Style" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CD">
+              <PropertyRef Name="barcode" />
+            </Principal>
+            <Dependent Role="Style">
+              <PropertyRef Name="barcode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="CDLibraryDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CDs" EntityType="Self.CD" />
+          <EntitySet Name="Genres" EntityType="Self.Genre" />
+          <EntitySet Name="Labels" EntityType="Self.Label" />
+          <EntitySet Name="Styles" EntityType="Self.Style" />
+          <AssociationSet Name="FK_CDGenre" Association="Self.FK_CDGenre">
+            <End Role="CD" EntitySet="CDs" />
+            <End Role="Genre" EntitySet="Genres" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CDLabel" Association="Self.FK_CDLabel">
+            <End Role="CD" EntitySet="CDs" />
+            <End Role="Label" EntitySet="Labels" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CDStyle" Association="Self.FK_CDStyle">
+            <End Role="CD" EntitySet="CDs" />
+            <End Role="Style" EntitySet="Styles" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CDLibraryDBStoreContainer" CdmEntityContainer="CDLibraryDBEntities">
+          <EntitySetMapping Name="CDs">
+            <EntityTypeMapping TypeName="CDLibraryDB.CD">
+              <MappingFragment StoreEntitySet="CD">
+                <ScalarProperty Name="barcode" ColumnName="barcode" />
+                <ScalarProperty Name="catno" ColumnName="catno" />
+                <ScalarProperty Name="year" ColumnName="year" />
+                <ScalarProperty Name="title" ColumnName="title" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Genres">
+            <EntityTypeMapping TypeName="CDLibraryDB.Genre">
+              <MappingFragment StoreEntitySet="Genre">
+                <ScalarProperty Name="barcode" ColumnName="barcode" />
+                <ScalarProperty Name="genre" ColumnName="genre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Labels">
+            <EntityTypeMapping TypeName="CDLibraryDB.Label">
+              <MappingFragment StoreEntitySet="Label">
+                <ScalarProperty Name="barcode" ColumnName="barcode" />
+                <ScalarProperty Name="label" ColumnName="label" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Styles">
+            <EntityTypeMapping TypeName="CDLibraryDB.Style">
+              <MappingFragment StoreEntitySet="Style">
+                <ScalarProperty Name="barcode" ColumnName="barcode" />
+                <ScalarProperty Name="style" ColumnName="style" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

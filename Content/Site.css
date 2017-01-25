@@ -1,0 +1,234 @@
+﻿
+/* document body */
+body {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+main {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* top & bottom */
+header, footer {
+    text-align:center;
+    margin:0; 
+    padding:0;  
+}
+
+/* forms generic */
+.forms {
+    background-color:#eeeeee;
+    border-radius:6px;
+    margin-bottom:3px;
+    padding:5px;
+}
+
+.forms label {
+    display:block;
+}
+
+.forms select {
+    margin-top:2px;
+}
+
+legend {
+    background-color:#ddd;
+    padding:5px;
+    border-radius:6px;
+    color:#A9A9A9;
+    font-weight:bold;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px #757575;
+}
+
+
+/* Lookup form*/
+#Lookup_Form .btn {
+    margin-top:25px;
+    float:right;
+    border-radius:6px;
+}
+ 
+/* CD details form */
+#CD_Form {
+    display:none;
+}
+
+/* CD Library Datatable */
+#CD_Library {
+    border:0 !important;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 15px #ccc; 
+
+}
+
+#CD_Library tbody, #CD_Library tr, #CD_Library th, #CD_Library thead {
+        border:none;
+}
+
+tbody, thead {
+    border-radius:6px !important;
+    border:none;
+}
+
+#CD_Library_filter input {
+    max-width:150px;
+    display:inline-block;
+    margin-left:2px;
+}
+
+#CD_Library tr, #CD_Library td {
+    cursor:pointer;
+}
+
+#CD_Library_wrapper .ui-widget-header, #CD_Library_filter {
+    padding:0;
+    margin:0;
+    max-height:36px;
+}
+
+/* form buttons */
+ #CD_Form .btn-group-lg .btn {
+     margin:10px 20px;
+     display:none;
+
+ }
+ .form-group.btn-group-lg {
+    background-color:#ddd;
+    padding:0;
+    margin:25px 0 0 0;
+    border-radius:6px;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 3px #757575;
+}
+
+ .close-cd {
+    margin-top:2px;
+    margin-right:3px; 
+    border-radius:6px; 
+}
+
+ /* fix bootstrap glyph issue */
+ #Lookup_Form .glyphicon.form-control-feedback {
+     z-index:999;
+     float:right;
+     margin-top:-25px;
+     margin-right:10px;
+ }
+
+ #CD_Form .glyphicon.form-control-feedback {
+     margin-top:-26px;
+     margin-right:6px;
+     z-index:999;
+     float:right;
+ }
+     
+ #CD_Form .glyphicon.tags {     
+     position:absolute;
+     right:15px;
+     top:60px;
+ }
+
+.input-group-addon {
+    cursor:help;
+
+}
+.has-error .glyphicon {
+    color: #d59392;
+}
+
+.has-success .glyphicon {
+    color: #7aba7b;
+}
+
+ #CD_Form .input-group-addon .glyphicon {
+    margin:-2px 0 0 0;
+}
+
+/* fixes for selectize & bootstrap inconsitency with validation classes */
+
+.selectize-input.focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  border-radius:0px 6px 6px 0;
+}
+
+.selectize-input {
+    border-radius: 0px 6px 6px 0;
+    overflow:unset;
+}
+
+.selectize-dropdown {
+     border-radius: 6px !important;
+     background-color:#fff;
+}
+
+
+.has-error .selectize-input {
+  border-color: #b94a48;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.has-error .selectize-input.focus {
+  border-color: #953b39;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #d59392;
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #d59392;
+}
+
+.has-success .selectize-input {
+  border-color: #468847;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.has-success .selectize-input.focus {
+  border-color: #356635;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #7aba7b;
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #7aba7b;
+}
+
+.control-focus {
+    color:rgb(102, 175, 233);
+}
+
+.control-focus:not(.has-success):not(.has-error) .input-group-addon {
+    border-color:rgb(102, 175, 233);
+}
+
+
+/* fix IE control issue */
+::-ms-clear { display: none; }
+
+/* fix dialog on JQUI*/
+.ui-dialog-titlebar-close {
+    background-image: url("images/ui-icons_777777_256x240.png");
+    background-position: -80px -128px;
+    border-radius:3px;
+}
+
+.ui-dialog-content p {
+    padding:3px;
+    margin:0;
+}
+
+.ui-dialog .glyphicon {
+    margin-right:5px;
+}
+
+.ui-dialog {
+    z-index:9999;
+}
+
+.ui-dialog-titlebar {
+    text-transform:uppercase;
+}
+
+.ui-dialog .ui-dialog-buttonpane {
+    padding:2px 2px 2px 8px;
+    margin-top:0;
+}
+.ui-dialog-buttonset > button {
+    border-radius:6px;
+}

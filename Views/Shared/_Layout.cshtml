@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    
+</head>
+<body>
+    <header class="container">
+        <h1>CD Library - Example ASP.NET MVC Web API(REST) C# Application</h1>
+        <p>Using:- JQuery(UI, DataTables, QTips, Selectize), Bootstrap, IoC / Dependency Injection via Unity, Entity Framework ORM, MS-SQL MDF, JSON &amp; Discogs API.</p>
+    </header>
+    <hr />
+    <main class="container">
+        @RenderBody()
+    </main>
+    <hr />
+    <footer  class="container">
+        <p>&copy; @DateTime.Now.Year - Craig Chant (DJ - C.D.C.) - <a href="http://dance-music.org">Dance Music Organisation</a></p>
+    </footer>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/site")
+
+</body>
+</html>
