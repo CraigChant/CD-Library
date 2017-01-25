@@ -7,8 +7,7 @@ Using:- JQuery(UI, DataTables, QTips, Selectize), Bootstrap, IoC / Dependency In
 
 SYNOPSIS :-
 
-As an oldschool DJ with a reasonable CD collection, I always meant to catalogue my CD's for insurance and sales purposes.
-However the thought of manually typing the list was far to daunting to bother.
+As an oldschool DJ with a reasonable CD collection, I always meant to catalogue my CD's for insurance and sales purposes, However the thought of manually typing the list was far to daunting to bother.
 
 I decided I would build an app to enable me to catalogue my CD collection with nothing more than a barcode reader.
 
