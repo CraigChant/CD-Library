@@ -19,7 +19,7 @@ Simply edit the CD_Library_Obj.js file and put your API code in the relevant pla
 
                Auth_Token: 'YOU NEED TO PUT YOUR OWN API TOKEN HERE', // Discogs Web API authorisation token
 
-I have also included the SQL MDF data file with some of my CD's already populating the DB. Just to show it works!
+I have also included the SQL MDF data file with some of my CD's already populating the DB, just to show it works!
 
 To remove my data simply delete the contents of the CD table, replace the app_data MDF file, or use your own DB context. 
 
