@@ -5,7 +5,7 @@ CD Library - Example ASP.NET MVC Web API(REST) C# Application
 
 Using:- JQuery(UI, DataTables, QTips, Selectize), Bootstrap, IoC / Dependency Injection via Unity, Entity Framework ORM, MS-SQL MDF, JSON & Discogs API.
 
-SYNOPSIS :-
+# SYNOPSIS :-
 
 As an old-school DJ with a reasonable CD collection, I always meant to catalogue my CD's for insurance and sales purposes, however the thought of manually typing the list was far to daunting to bother.
 
