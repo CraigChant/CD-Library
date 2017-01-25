@@ -31,4 +31,6 @@ http://dance-music.org/CD-Library/CD-Library_1.png
 
 http://dance-music.org/CD-Library/CD-Library_2.png
 
+http://dance-music.org/CD-Library/CD-Library_3.png
+
 I hope you find it usefull and welcome all feedback.
