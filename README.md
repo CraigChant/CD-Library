@@ -25,7 +25,7 @@ To remove my data simply delete the contents of the CD table, replace the app_da
 
 I've used interfaces / IoC / Dependency Injection, so using your own data source if you know ASP.NET / MVC should be a doddle.
 
-Here are links to a couple of screen shots...
+Here are links to some screen shots...
 
 http://dance-music.org/CD-Library/CD-Library_1.png
 
