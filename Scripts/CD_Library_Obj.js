@@ -334,7 +334,8 @@ var CD_Library_Obj =
         });
     },
     discogsWeb: function () {
-        return 'https://www.discogs.com/search/?q=' + encodeURI(this.CD.title) + ' | ' + + encodeURI(this.CD.barcode) + '&catno=' + encodeURI(this.CD.catno);    }
+        return 'https://www.discogs.com/search/?q=' + encodeURI(this.CD.title) + ' | ' + +encodeURI(this.CD.barcode) + '&catno=' + encodeURI(this.CD.catno);
+    }
 
 };
 
