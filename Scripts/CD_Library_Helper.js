@@ -134,6 +134,7 @@ function checkValid(ele) {
 
     // ignore browser validation errors
     try {
+
         // get closest parent with has-feedback
         var obj = $(ele).closest('.has-feedback');
 
@@ -161,7 +162,7 @@ function checkValid(ele) {
             // set classes for valid
             obj.removeClass('has-error');
             obj.addClass('has-success');
-            obj.find('.form-control-feedback').removeClass('glyphicon-pencil').removeClass('glyphicon-remove-circle');
+            obj.find('.form-control-feedback').removeClass('glyphicon-pencil');
             obj.find('.form-control-feedback').addClass('glyphicon-ok-circle');
 
         }
@@ -169,7 +170,7 @@ function checkValid(ele) {
             // set classes for invalid
             obj.removeClass('has-success');
             obj.addClass('has-error');
-            obj.find('.form-control-feedback').removeClass('glyphicon-pencil').removeClass('glyphicon-ok-circle');
+            obj.find('.form-control-feedback').removeClass('glyphicon-pencil');
             obj.find('.form-control-feedback').addClass('glyphicon-remove-circle');
 
             // custom error messages for pattern mismatch

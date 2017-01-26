@@ -216,6 +216,11 @@ function closeCD()
     $('#CD_Form input:not(.btn)').val('');
     $('#CD_Form').find('.has-error, .has-success').removeClass('has-error').removeClass('has-success');
 
+    // reset glyphs
+    $('#CD_Form').find('form-control-feedback').removeClass('glyphicon-remove-circle');
+    $('#CD_Form').find('.form-control-feedback').removeClass('glyphicon-ok-circle');
+    $('#CD_Form').find('.form-control-feedback').addClass('glyphicon-pencil');
+
     // show lookup
     $('#Lookup_Form').slideDown("slow");
 
