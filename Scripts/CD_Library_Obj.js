@@ -125,7 +125,7 @@ var CD_Library_Obj =
             this.DataTable.search('').draw();
         }
 
-        // rest attributes
+        // reset attributes
         this.CD = {};
         this.FA = 'L';
         this.Dirty = false;
