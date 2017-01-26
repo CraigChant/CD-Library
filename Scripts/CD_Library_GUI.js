@@ -203,7 +203,7 @@ function updateButtons()
     else
     {
         $('.discogs').hide();
-        $('barcode').removeClass('no-right-radius');
+        $('#barcode').removeClass('no-right-radius');
     }
 
 }
