@@ -194,6 +194,18 @@ function updateButtons()
 
     });
 
+    // show discog web lookup
+    if (CD_Library.FA == 'D' || CD_Library.FA == 'U')
+    {
+        $('.discogs').show();
+        $('#barcode').addClass('no-right-radius');
+    }
+    else
+    {
+        $('.discogs').hide();
+        $('barcode').removeClass('no-right-radius');
+    }
+
 }
 
 // close CD 
@@ -351,6 +363,11 @@ function addEvents()
     // CD form submit buttons for Form Action (FA)
     $('#CD_Form .btn-group-lg .btn').on('click',function (e) {
         CD_Library.FA = $(this).data('fa');
+    });
+
+    // discogs website 
+    $('.btn.discogs').on('click', function () {
+        window.open(CD_Library.discogsWeb(), 'discogs');
     });
 
     // Lookup form submission

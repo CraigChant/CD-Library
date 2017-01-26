@@ -83,7 +83,8 @@ var CD_Library_Obj =
         'labels': 'glyphicon-tags',
         'search': 'glyphicon-search',
         'view': 'glyphicon-eye-open',
-        'info': 'glyphicon-info-sign'
+        'info': 'glyphicon-info-sign',
+        'globe': 'glyphicon-globe'
     },
     performCRUD: function (callback_ok, callback_fail) {
 
@@ -213,7 +214,6 @@ var CD_Library_Obj =
 
         // check dirty flag
         if (this.Dirty) {
-            console.log(this.CD);
             // compare CD with GUI
             return JSON.stringify(this.CD) !== JSON.stringify(this.loadGUI())
         }
@@ -332,6 +332,9 @@ var CD_Library_Obj =
             }
 
         });
+    },
+    discogsWeb: function () {
+        return 'https://www.discogs.com/search/?type=all&catno=' + encodeURI(this.CD.catno) + '&barcode' + encodeURI(this.CD.barcode) + '&title' + encodeURI(this.CD.title);
     }
 
 };

@@ -107,6 +107,25 @@ tbody, thead {
     border-radius:6px; 
 }
 
+
+.discogs {
+    display:none;
+}
+
+.input-group-btn .glyphicon  {
+    color: rgba(50, 50, 50, 0.6) !important;
+}
+
+.input-group .form-control:not(:first-child):not(:last-child) {
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.no-right-radius {
+    border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+}
+
  /* fix bootstrap glyph issue */
  #Lookup_Form .glyphicon.form-control-feedback {
      z-index:999;
@@ -124,8 +143,8 @@ tbody, thead {
      
  #CD_Form .glyphicon.tags {     
      position:absolute;
-     right:15px;
-     top:60px;
+     right:0px;
+     top:35px;
  }
 
 .input-group-addon {

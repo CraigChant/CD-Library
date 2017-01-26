@@ -33,8 +33,13 @@
                                     <span class="glyphicon glyphicon-barcode"></span>
                                 </span>
                                 <input readonly="readonly" placeholder="Enter CD barcode" id="barcode" type="text" maxlength="15" value="" class="form-control validate" pattern="[0-9]{12,15}" data-error="Please enter a valid CD barcode. Max 15 digits." required />
+                                <span class="glyphicon glyphicon-pencil form-control-feedback"></span>
+                                <div class="input-group-btn">
+                                    <button class="btn btn-default discogs" type="button" title="View CD on Discogs website" data-icon="globe">
+                                        <span class="glyphicon glyphicon-globe"></span>
+                                    </button>
+                                </div>
                             </div>
-                            <span class="glyphicon glyphicon-pencil form-control-feedback"></span>
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -45,8 +50,8 @@
                                     <span class="glyphicon glyphicon-book"></span>
                                 </span>
                                 <input placeholder="Enter catalogue number" id="catno" type="text" maxlength="30" value="" class="form-control validate" pattern="[0-9a-zA-Z\-\. ]{3,}" data-error="Alphanumeric, hyphens & spaces only. Min 3 Char, Max 30 Char." required />
+                                <span class="glyphicon glyphicon-pencil form-control-feedback"></span>
                             </div>
-                            <span class="glyphicon glyphicon-pencil form-control-feedback"></span>
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -57,8 +62,8 @@
                                     <span class="glyphicon glyphicon-calendar"></span>
                                 </span>
                                 <input placeholder="Enter release year" id="year" type="text" maxlength="4" value="" class="form-control validate" pattern="[1]{1}[9]{1}[0-9]{2}|[2-9]{1}[0-9]{3}" data-error="Please enter a valid year" required />
+                                <span class="glyphicon glyphicon-pencil form-control-feedback"></span>
                             </div>
-                            <span class="glyphicon glyphicon-pencil form-control-feedback"></span>
                         </div>
                     </div>
                 </div>
@@ -69,8 +74,8 @@
                             <span class="glyphicon glyphicon-headphones"></span>
                         </span>
                         <input placeholder="Enter CD title" id="title" type="text" maxlength="150" value="" class="form-control validate" pattern=".{3,}" data-error="Min 3 Char, Max 150 Char." required />
+                        <span class="glyphicon glyphicon-pencil form-control-feedback"></span>
                     </div>
-                    <span class="glyphicon glyphicon-pencil form-control-feedback"></span>
                 </div>
                 <div class="row">
                     <div class="col-md-6">
@@ -81,8 +86,8 @@
                                     <span class="glyphicon glyphicon-music"></span>
                                 </span>
                                 <input placeholder="Enter genre" id="Genres" type="text" data-name="genre" data-maxlength="50" data-minlength="3" value="" class="form-control validate tags" pattern=".{3,}" data-error="Min 3 Char, Max 50 Char." required data-required="true" />
+                                <span class="glyphicon glyphicon-pencil form-control-feedback tags"></span>
                             </div>
-                            <span class="glyphicon glyphicon-pencil form-control-feedback tags"></span>
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -93,8 +98,8 @@
                                     <span class="glyphicon glyphicon-music"></span>
                                 </span>
                                 <input placeholder="Enter style" id="Styles" type="text" data-name="style" data-maxlength="50" data-minlength="3" value="" class="form-control validate tags" pattern=".{3,}" data-error="Min 3 Char, Max 50 Char." required data-required="true" />
+                                <span class="glyphicon glyphicon-pencil form-control-feedback tags"></span>
                             </div>
-                            <span class="glyphicon glyphicon-pencil form-control-feedback tags"></span>
                         </div>
                     </div>
                 </div>
@@ -107,8 +112,8 @@
                                     <span class="glyphicon glyphicon-tags"></span>
                                 </span>
                                 <input placeholder="Enter label" id="Labels" type="text" data-name="label" data-maxlength="150" data-minlength="3" value="" class="form-control validate tags" pattern=".{3,}" data-error="Min 3 Char, Max 150 Char." required data-required="true" />
+                                <span class="glyphicon glyphicon-pencil form-control-feedback tags"></span>
                             </div>
-                            <span class="glyphicon glyphicon-pencil form-control-feedback tags"></span>
                         </div>
                         <div class="form-group btn-group-lg text-center">
                             <input type="submit" class="btn btn-success btn-lg" value="INSERT" title="Add CD to database"  data-fa="A" data-icon="add" />
