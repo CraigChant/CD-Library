@@ -15,7 +15,7 @@ var CD_Library_Obj =
         title: null,
         Genres: [],
         Styles: [],
-        Lables: []
+        Labels: []
     },
     FA: 'L', // form action flag (L = Lookup , A = Add, U = Update, D = Delete) - default: Lookup
     Dirty: false, // Dirty form flag

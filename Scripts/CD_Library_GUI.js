@@ -47,7 +47,7 @@ $(function () {
 		                    { 'sWidth': '100px', 'aTargets': [0] },
 		                    { 'sWidth': '120px', 'aTargets': [1] },
 		                    { 'sWidth': '500px', 'aTargets': [2] },
-		                    { 'sWidth': '30px', 'aTargets': [3] },
+		                    { 'sWidth': '40px', 'aTargets': [3] },
                             { 'sWidth': '0px', 'aTargets': [4] },
 		                    { 'sWidth': '0px', 'aTargets': [5] },
 		                    { 'sWidth': '0px', 'aTargets': [6] },
